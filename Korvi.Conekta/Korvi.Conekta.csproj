@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api.cs" />
+    <Compile Include="ConektaException.cs" />
     <Compile Include="Domain\Charge.cs" />
     <Compile Include="Domain\CreateCustomerResponse.cs" />
     <Compile Include="Domain\CreateOrderResponse.cs" />

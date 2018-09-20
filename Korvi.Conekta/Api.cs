@@ -100,7 +100,14 @@ namespace Korvi.Conekta
             stream.Write(bytes, 0, bytes.Length);
             stream.Close();
 
-            return (HttpWebResponse)request.GetResponse();
+            try
+            {
+                return (HttpWebResponse)request.GetResponse();
+            }
+            catch(WebException ex)
+            {
+                throw new ConektaException(ex);
+            }
         }
 
         #endregion
